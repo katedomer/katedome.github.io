@@ -10,45 +10,54 @@
             font-size: 18px; /* Increase font size */
             margin: 0;
             padding: 0;
-            color: #00ff00; /* Neon green color */
-            text-align: center; /* Center the text */
-            background: url('tronpic.jpeg.webp') no-repeat center center fixed; 
-            background-size: cover; /* Cover entire background */
+            color: #00ffff; /* Neon blue color */
+            background: black; /* Black background color */
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            justify-content: space-between; /* Space between the main axis */
             height: 100vh;
-            background-color: rgba(0, 0, 0, 0.5); /* Background color with transparency */
         }
         h1 {
-            margin: 20px 0;
+            margin-top: 20px; /* Add space to the top */
+            text-align: center;
         }
         p {
-            margin-bottom: 20px; /* Add space between paragraphs */
-            color: white; /* Change paragraph color to white */
+            text-align: center;
+            margin-top: -20px; /* Adjust space */
         }
         .end-game-button {
-            border: 2px solid #00ff00; /* Neon green border */
-            background-color: transparent;
-            color: #00ff00; /* Neon green text color */
+            background-color: #ffa500; /* Orange background */
+            border: none; /* No border */
+            color: black; /* Black text color */
             padding: 10px 20px;
             text-decoration: none;
             display: inline-block;
             cursor: pointer;
             transition: background-color 0.3s, color 0.3s; /* Smooth transition */
             font-size: 18px; /* Increase font size */
-            margin-top: 20px; /* Add space above link */
+            position: absolute; /* Absolute position */
+            bottom: 20px; /* Bottom space */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Center align element */
         }
         .end-game-button:hover {
-            background-color: #00ff00; /* Neon green background on hover */
-            color: black; /* Change text color on hover */
+            background-color: #cc7a00; /* Darker orange on hover */
+            color: white; /* White text on hover */
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
-    <h1>TRON</h1>
-    <p>"If you are a User, then everything you've done has been according to a plan."</p>
-    <a href="index.html" class="end-game-button">End Game</a>
-</body>
-</html>
+    <header>
+        <h1>TRON</h1>
+    </header>
+    <div class="content">
+        <p>"If you are a User, then everything you've done has been according to a plan."</p>
+    </div>
+    <footer>
+        <a href="index.html"
