@@ -5,64 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TRON</title>
     <style>
-        html, body {
-            height: 100%;
+        body {
+            font-family: 'Courier New', Courier, monospace; 
+            font-size: 18px;
             margin: 0;
             padding: 0;
-            background-color: black; /* Black background color */
-            color: #00ffff; /* Neon blue color */
-            font-family: 'Courier New', Courier, monospace;
+            background: black url('tronpic.jpeg.webp') no-repeat center center fixed; 
+            background-size: cover;
             display: flex;
             flex-direction: column;
-            justify-content: space-between; /* Distribute content */
+            justify-content: space-between;
+            height: 100vh;
         }
         header {
+            color: #00ffff; /* Neon blue color */
             text-align: center;
-            padding: 20px 0; /* Space at the top */
-        }
-        .content {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background: url('tronpic.jpeg.webp') no-repeat center center fixed; 
-            background-size: cover; /* Cover entire background */
-            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
-        }
-        p {
-            margin: 0 20px; /* Horizontal padding for text */
-            text-align: center;
-        }
-        footer {
-            text-align: center;
-            padding: 20px 0; /* Space at the bottom */
+            padding-top: 20px; /* Space from the top */
         }
         .end-game-button {
             background-color: #ffa500; /* Orange background */
             color: black; /* Black text color */
-            border: none; /* No border */
             padding: 10px 20px;
             text-decoration: none;
+            display: inline-block;
             cursor: pointer;
+            border: none; /* Remove border */
             transition: background-color 0.3s, color 0.3s; /* Smooth transition */
-            font-size: 18px; /* Increase font size */
+            font-size: 18px;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
         }
         .end-game-button:hover {
             background-color: #cc7a00; /* Darker orange on hover */
             color: white; /* White text on hover */
+        }
+        footer {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>TRON</h1>
-    </header>
-    <div class="content">
         <p>"If you are a User, then everything you've done has been according to a plan."</p>
-    </div>
+    </header>
     <footer>
         <a href="index.html" class="end-game-button">End Game</a>
     </footer>
 </body>
 </html>
+
 
