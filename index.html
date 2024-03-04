@@ -10,14 +10,26 @@
             margin: 0;
             padding: 0;
             background-color: black;
-            color: #00ff00; /* TRON-like neon green */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Courier New', Courier, monospace; /* Mimic video game text */
+            overflow: hidden; /* Prevent scrolling */
+        }
+        video {
+            position: fixed; /* Use fixed to cover the entire screen and stay in place on scroll */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover; /* Cover the entire screen without losing aspect ratio */
+            z-index: -1; /* Ensure video is behind other content */
         }
         .center-content {
+            position: relative; /* Ensure content is positioned above the video */
+            z-index: 1;
+            color: #00ff00; /* TRON-like neon green */
             text-align: center;
+            top: 50%; /* Center vertically */
+            left: 50%; /* Center horizontally */
+            transform: translate(-50%, -50%); /* Adjust for exact centering */
+            font-family: 'Courier New', Courier, monospace; /* Mimic video game text */
         }
         .tron-button {
             background-color: #00ff00; /* Neon green */
@@ -35,6 +47,12 @@
     </style>
 </head>
 <body>
+    <!-- Video as background -->
+    <video autoplay muted loop>
+        <source src="Gen-2 755027204, TRON video game insp, DALL·E 2024-03-03 20, M 5.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <div class="center-content">
         <h1>WELCOME TO TRON</h1>
         <p>Embark on a digital adventure where the impossible becomes possible.</p>
