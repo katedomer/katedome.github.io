@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to TRON</title>
     <style>
-        body {
-            /* Fallback font to mimic video game text */
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 16px;
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
             background-color: black;
             color: #00ff00; /* TRON-like neon green */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace; /* Mimic video game text */
         }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
+        .center-content {
             text-align: center;
         }
         .tron-button {
@@ -25,10 +24,8 @@
             border: 2px solid #fff; /* White border */
             color: black;
             padding: 10px 20px;
-            text-align: center;
             text-decoration: none;
             display: inline-block;
-            font-family: 'Courier New', Courier, monospace; /* Pixelated font style */
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
@@ -38,10 +35,10 @@
     </style>
 </head>
 <body>
-    <header>
+    <div class="center-content">
         <h1>WELCOME TO TRON</h1>
         <p>Embark on a digital adventure where the impossible becomes possible.</p>
         <a href="content.html" class="tron-button">Enter the Grid</a>
-    </header>
+    </div>
 </body>
 </html>
