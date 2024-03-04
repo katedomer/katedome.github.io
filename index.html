@@ -10,26 +10,19 @@
             margin: 0;
             padding: 0;
             background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden; /* Prevent scrolling */
         }
-        video {
-            position: fixed; /* Use fixed to cover the entire screen and stay in place on scroll */
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover; /* Cover the entire screen without losing aspect ratio */
-            z-index: -1; /* Ensure video is behind other content */
-        }
         .center-content {
-            position: relative; /* Ensure content is positioned above the video */
-            z-index: 1;
-            color: #00ff00; /* TRON-like neon green */
             text-align: center;
-            top: 50%; /* Center vertically */
-            left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Adjust for exact centering */
+            color: #00ff00; /* TRON-like neon green */
             font-family: 'Courier New', Courier, monospace; /* Mimic video game text */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
         .tron-button {
             background-color: #00ff00; /* Neon green */
@@ -40,22 +33,28 @@
             display: inline-block;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-top: 20px; /* Space between video and button */
         }
         .tron-button:hover {
             background-color: #009900;
         }
+        video {
+            width: 80vw; /* Responsive width */
+            max-width: 640px; /* Maximum width */
+            height: auto; /* Maintain aspect ratio */
+            border: 2px solid #00ff00; /* TRON-like neon green border */
+            margin: 20px 0; /* Space above and below the video */
+        }
     </style>
 </head>
 <body>
-    <!-- Video as background -->
-   <video controls autoplay loop>
-        <source src="tronvideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
     <div class="center-content">
         <h1>WELCOME TO TRON</h1>
-        <p>Embark on a digital adventure where the impossible becomes possible.</p>
+        <!-- Video positioned here, between the heading and the button -->
+        <video autoplay muted loop controls>
+            <source src="tronvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <a href="content.html" class="tron-button">Enter the Grid</a>
     </div>
 </body>
